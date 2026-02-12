@@ -1,0 +1,218 @@
+body {  /* configuramos el bosy de la página */
+    font-family: Arial, sans-serif; /* tipo de letra */
+    background: linear-gradient(to right, #ece9e6, #ffffff); /* fondo con degradado de izquierda a derecha */
+    text-align: center; /* centra el texto */
+    margin: 0; 
+}
+
+
+.container {
+    display: flex; /* flexbox */
+    flex-wrap: wrap; /* bajar a otra fila si no caben */
+    justify-content: center; /* centra las cartas */
+    gap: 25px; /* espacio entre cada carta */
+    padding: 30px; 
+
+    background: linear-gradient( /* degradado suave de fondo */
+        to right,
+        #e3f2fd,
+        #f8fbff,
+        #ffffff
+    ); 
+}
+
+
+.card {
+    width: 100%; /*ancho de la carta */
+    max-width: 260px; /* ancho máximo*/
+    padding: 40px; 
+    border-radius: 15px; 
+    border: 10px solid gold; /* borde grueso color dorado */
+    background: white; /* fondo blanco */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* sombra */
+
+}
+
+.card:hover {
+    transform: scale(1.1); /* agranda la carta al pasar el mouse */
+}
+
+.card-header {
+    display: flex; 
+    justify-content: space-between; /* separa los elementos  */
+    font-weight: bold; /* texto en negrita */
+    margin-bottom: 10px; 
+}
+
+.card img {
+    background-color: #FAE38F; /* fondo */
+    border-radius: 8px; /* bordes redondeados */
+    border: 10px solid gold; /* borde dorado */
+    width: 150px; /* tamaño  */
+    margin: 60px 0; /* espacio arriba y abajo */
+}
+
+.type-badge {
+    padding: 6px 10px; /* espacio interno */
+    border-radius: 8px; /* esquinas redondeadas */
+    font-size: 14px; /* tamaño del texto */
+    font-weight: bold; /* texto en negrita */
+}
+
+.generation-title {
+    width: 100%; /* ocupa todo el ancho */
+    margin-top: 60px; /* espacio arriba */
+    margin-bottom: 20px; /* espacio abajo */
+    font-size: 28px; /* tamaño del título */
+    border-bottom: 4px solid black; /* línea debajo del título */
+    padding-bottom: 10px; /* espacio entre texto y línea */
+}
+
+
+
+.main-header {
+    background: linear-gradient(to bottom, #000000, #ffffff); /* degradado negro a blanco */
+    padding: 40px 20px; /* espacio interno */
+    text-align: center; /* centra el texto */
+}
+
+.logo-title {
+    font-size: 60px; /* tamaño grande del texto */
+    font-weight: 900; /* grosor fuerte */
+    margin: 0; /* sin margen */
+    color: #ffcb05; /* color amarillo */
+
+    text-shadow: /* sombra azul para efecto estilo logo */
+        -3px -3px 0 #2a75bb,
+         3px -3px 0 #2a75bb,
+        -3px  3px 0 #2a75bb,
+         3px  3px 0 #2a75bb,
+         0px  4px 0 #2a75bb; 
+
+    letter-spacing: 3px; /* espacio entre letras */
+}
+
+
+
+
+@media (max-width: 768px) { /* Tamaño para Tablets y celulares */
+
+    .logo-title {
+        font-size: 40px; /* texto más pequeño */
+    }
+
+    .main-header {
+        padding: 25px 10px; /* menos espacio interno */
+    }
+
+    .container {
+        display: grid; /*  grid */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* columnas automáticas */
+
+    }
+
+    .card {
+        padding: 20px; 
+        border-width: 6px; /* borde más delgado */
+    }
+
+    .card img {
+        width: 100px; /* imagen más pequeña */
+        margin: 30px 0; /* menos espacio vertical */
+        border-width: 4px; /* borde más delgado */
+    }
+
+    .generation-title {
+        font-size: 22px; /* título más pequeño */
+        margin-top: 40px; /* menos espacio arriba */
+    }
+
+}
+
+
+@media (max-width: 480px) { /* Celulares pequeños */
+
+    .logo-title {
+        font-size: 28px; /* texto aún más pequeño */
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* columnas más pequeñas */
+ 
+    }
+
+    .card {
+        max-width: 140px; /* ancho máximo reducido */
+        padding: 15px; /* menos relleno */
+        border-width: 5px; /* borde más delgado */
+        border-radius: 10px; /* bordes menos redondeados */
+    }
+
+    .card img {
+        width: 90px; /* imagen más chica */
+        margin: 15px 0; /* menos espacio */
+        border-width: 5px; /* borde más delgado */
+    }
+
+    .card-header {
+        font-size: 12px; /* texto más pequeño */
+    }
+
+    .type-badge {
+        font-size: 11px; /* tamaño pequeño */
+    }
+
+    .generation-title {
+        font-size: 18px; /* título más chico */
+    }
+}
+
+/* COLORES POR TIPO DE POKEMON */
+
+.fire {
+    background: linear-gradient(135deg, #ff512f, #f09819); /* degradado rojo a naranja */
+    color: white; /* texto blanco */
+}
+
+.water {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* degradado azul */
+    color: white; /* texto blanco */
+}
+
+.grass {
+    background: linear-gradient(135deg, #56ab2f, #a8e063); /* degradado verde */
+    color: white; /* texto blanco */
+}
+
+.electric {
+    background: linear-gradient(135deg, #f7971e, #ffd200); /* degradado amarillo */
+    color: black; /* texto negro */
+}
+
+.psychic {
+    background: linear-gradient(135deg, #ff6a88, #ff99ac); /* degradado rosa */
+    color: white; /* texto blanco */
+}
+
+.ice {
+    background: linear-gradient(135deg, #83a4d4, #b6fbff); /* degradado azul claro */
+}
+
+.dragon {
+    background: linear-gradient(135deg, #654ea3, #eaafc8); /* degradado morado */
+    color: white; /* texto blanco */
+}
+
+.dark {
+    background: linear-gradient(135deg, #232526, #414345); /* degradado gris oscuro */
+    color: white; /* texto blanco */
+}
+
+.fairy {
+    background: linear-gradient(135deg, #ff9a9e, #fecfef); /* degradado rosa claro */
+}
+
+.normal {
+    background: linear-gradient(135deg, #bdc3c7, #2c3e50); /* degradado gris */
+    color: white; /* texto blanco */
+}
